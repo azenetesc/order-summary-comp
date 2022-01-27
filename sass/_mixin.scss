@@ -1,0 +1,9 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin focusOnlyVcisible {
+  outline: 2px solid rgb(107, 0, 84);
+}

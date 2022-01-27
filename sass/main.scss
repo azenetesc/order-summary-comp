@@ -1,0 +1,126 @@
+@use "variables" as *;
+@use "mixin" as *;
+
+body {
+  @include flex-center;
+  background-image: url("/images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: $ff-body;
+  text-align: center;
+  background-color: $pale-blue;
+}
+
+.card {
+  width: 87%;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: $clr-white;
+  /*CARD HEADER IMG*/
+  .card-header {
+    background-image: url("/images/illustration-hero.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 10em;
+  }
+}
+
+.card-body {
+  margin: 1.6em;
+  .main-title {
+    color: $dark-blue;
+    font-weight: $fw-bolder;
+  }
+  .main-text {
+    color: $desaturated-blue;
+    margin: 1.2em auto;
+    line-height: 25px;
+    font-weight: $fw-normal;
+  }
+  .card-btn {
+    display: block;
+    padding: 0.85em;
+    border-radius: 10px;
+    background-color: $bright-blue;
+    color: $clr-white;
+    text-decoration: none;
+    font-weight: $fw-bold;
+    box-shadow: 0 10px 15px 8px hsla(224, 53%, 86%, 0.788);
+    margin: 1.5em auto;
+  }
+  .card-cancel {
+    color: $desaturated-blue;
+    font-weight: $fw-bolder;
+    text-decoration: none;
+  }
+}
+
+.card-plan {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: $very-pale-blue;
+  img {
+    margin-right: 0.8em;
+  }
+  .card-year-plan {
+    margin: right;
+    span {
+      font-weight: $fw-bold;
+      color: $dark-blue;
+    }
+    p {
+      color: $desaturated-blue;
+      font-weight: $fw-normal;
+    }
+  }
+  .change-plan {
+    margin-left: auto;
+    color: $bright-blue;
+    font-weight: $fw-bolder;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+a:focus-visible {
+  @include focusOnlyVcisible;
+}
+
+@media screen and (min-width: 400px) {
+  body {
+    background-image: url("/images/pattern-background-desktop.svg");
+    background-size: contain;
+    .card {
+      max-width: 450px;
+      .card-body {
+        margin: 0.5em 1.8em 2em;
+      }
+      .card-header {
+        height: 13.75em;
+        background-size: contain;
+      }
+    }
+    .change-plan:hover {
+      text-decoration: none;
+      color: hsla(245, 75%, 52%, 0.603);
+    }
+
+    .card-btn:hover {
+      background-color: hsla(245, 75%, 52%, 0.603);
+    }
+
+    .card-cancel:hover {
+      color: #000;
+    }
+  }
+}
