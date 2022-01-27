@@ -3,7 +3,7 @@
 
 body {
   @include flex-center;
-  background-image: url("/images/pattern-background-mobile.svg");
+  background-image: url("../../images/pattern-background-mobile.svg");
   background-repeat: no-repeat;
   flex-direction: column;
   min-height: 100vh;
@@ -20,7 +20,7 @@ body {
   background-color: $clr-white;
   /*CARD HEADER IMG*/
   .card-header {
-    background-image: url("/images/illustration-hero.svg");
+    background-image: url("../../images/illustration-hero.svg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 10em;
@@ -98,7 +98,7 @@ a:focus-visible {
 
 @media screen and (min-width: 400px) {
   body {
-    background-image: url("/images/pattern-background-desktop.svg");
+    background-image: url("../../images/pattern-background-desktop.svg");
     background-size: contain;
     .card {
       max-width: 450px;
