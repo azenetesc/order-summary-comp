@@ -18,7 +18,7 @@ body {
   border-radius: 20px;
   overflow: hidden;
   background-color: $clr-white;
-  /*CARD HEADER IMG*/
+  box-shadow: 0 10px 15px 8px hsla(0, 0%, 20%, 0.096);
   .card-header {
     background-image: url("../../images/illustration-hero.svg");
     background-repeat: no-repeat;
